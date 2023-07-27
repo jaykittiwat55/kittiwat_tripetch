@@ -1,73 +1,39 @@
 .app {
     font-family: "Roboto-Medium";
 }
-
 @font-face {
     font-family: "Roboto-Medium";
     src: local("Roboto-Medium"),
         url("./fonts/Roboto-Medium.ttf") format("truetype");
 }
-
-.football-layout1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertical alignment */
+.container-right1 {
+    background: #ffffff;
 }
-.football-layout2 {
-    width: 100%;
-    height: 256px;
-    top: 345px;
+.container-right2 {
     background: #f5f4f9;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertical alignment */
 }
-
-.football-layout3 {
-    width: 100%;
-    height: 297px;
-    top: 601px;
+.container-right3 {
     background: #5e3db3;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertical alignment */
 }
-.basketball-layout1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertical alignment */
+.container-left1 {
 }
-.basketball-layout2 {
-    width: 100%;
-    height: 245px;
-    top: 485px;
+.container-left2 {
     background: #f5f4f9;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertical alignment */
 }
-.basketball-layout3 {
-    width: 100%;
-    height: 268px;
-    top: 730px;
+.container-left3 {
     background: #090c35;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Vertical alignment */
 }
 .head-title {
     font-size: 90px;
     font-weight: 400;
-    line-height: 105px;
-    letter-spacing: 0px;
-    text-align: left;
     color: #e7e7e7;
+    margin-top: 10%;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 .label {
     font-size: 18px;
     font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0px;
     text-align: left;
     color: #000000;
     display: flex;
@@ -75,10 +41,9 @@
 .under-line {
     font-size: 18px;
     font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0px;
     text-align: center;
     margin: 5px;
+    margin-top: 45px;
 }
 .under-line::after {
     content: "";
@@ -89,22 +54,204 @@
 .label-text {
     font-size: 36px;
     font-weight: 400;
-    line-height: 42px;
-    letter-spacing: 1.5px;
     text-align: left;
     color: #c2c2c2;
+    margin-top: 40px;
 }
 .description {
     font-size: 20px;
     font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0px;
     text-align: left;
     color: #000000;
+    margin-top: 30px;
 }
-.light-text{
+.light-text {
     color: #ffffff !important;
 }
-.light-text-2{
+.light-text-2 {
     color: #603ebe !important;
+}
+.content-1 > div {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-right: 0;
+}
+.content-2 > div {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+.content-1 > div > div {
+    margin-left: 50%;
+    padding-left: 2%;
+    padding-right: 10%;
+}
+.content-2 > div > div {
+    margin-right: 50%;
+    padding-right: 2%;
+    padding-left: 10%;
+}
+.flex-layout {
+    display: flex;
+    justify-content: flex-end;
+}
+/* .line {
+    width: 5px;
+    max-height: 750px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #603ebe ;
+    transform: rotate(45deg); 
+    position: absolute;
+  } */
+
+.image-container1 {
+    position: absolute;
+    padding-right: 50%;
+    padding-left: 5%;
+}
+.image-container2 {
+    position: absolute;
+    padding-left: 50%;
+    padding-right: 5%;
+}
+.football {
+    width: 100%;
+    height: auto;
+}
+.basketball {
+    width: 100%;
+    height: auto;
+}
+.image-container3 {
+    display: none;
+}
+.slide1,
+.slide2 {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .content-1 > div > div {
+        margin-left: 40%;
+        padding-left: 0;
+        padding-right: 5%;
+        overflow: hidden;
+    }
+    .content-2 > div > div {
+        margin-right: 40%;
+        padding-right: 0;
+        padding-left: 5%;
+        overflow: hidden;
+    }
+    .image-container1 {
+        position: absolute;
+        padding-right: 0;
+        padding-left: 0;
+        overflow: hidden;
+    }
+    .image-container2 {
+        position: absolute;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+    }
+    .football {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 50px;
+        margin-left: -50%;
+    }
+    .basketball {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 10px;
+        right: -290px;
+    }
+    .head-title {
+        font-size: 50px;
+        font-weight: 400;
+        color: #e7e7e7;
+        word-wrap: break-word;
+        max-width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container-right1 > div > .label,
+    .container-right1 > div > .description,
+    .container-left1 > div > .label,
+    .container-left1 > div > .description,
+    .container-left3,
+    .container-right3 {
+        display: none !important;
+    }
+    .container-right1,
+    .container-left1 {
+        height: 240px;
+    }
+    .image-container1 {
+        padding: 70px;
+    }
+    .image-container2 {
+        padding: 10px;
+        overflow: initial;
+    }
+    .football {
+        position: relative;
+        top: 10px;
+        left: 0;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .basketball {
+        position: relative;
+        top: 85px;
+        left: 0;
+        margin-top: 0;
+    }
+    .head-title {
+        font-size: 50px;
+        font-weight: 400;
+        color: #e7e7e7;
+        word-wrap: break-word;
+        max-width: 100%;
+        margin-top: 0;
+    }
+    .content-1 > div {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .content-2 > div {
+        padding-top: 15px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .content-1 > div > div {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .content-2 > div > div {
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .hide-content {
+        display: none;
+    }
+    .label-text {
+        font-size: 30px;
+        font-weight: 400;
+        text-align: left;
+        color: #c2c2c2;
+        margin-top: 40px;
+    }
+    .slide1,
+    .slide2 {
+        display: block;
+    }
 }
