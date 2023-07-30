@@ -4,8 +4,6 @@ import basketball from "./assets/images/basketball.png";
 import { Carousel } from "antd";
 
 function App() {
-    
-  
     const slide1 = () => {
         return (
             <Carousel>
@@ -46,7 +44,7 @@ function App() {
     };
     const slide2 = () => {
         return (
-            <Carousel >
+            <Carousel>
                 <div>
                     <div className="label">
                         <div className="under-line"> 01 </div>
@@ -87,6 +85,14 @@ function App() {
             <div className="content-1">
                 <span className="image-container1">
                     <img src={football} className="football"></img>
+                    <div className="bg-style-line">
+                        <div className="line l1"></div>
+                        <div className="line l2"></div>
+                    </div>  
+                    <div className="bg-style-point">
+                        <div className="point p1">+</div>
+                        <div className="point p2">+</div>
+                    </div>                  
                 </span>
                 <div className="container-right1">
                     <div>
@@ -114,9 +120,7 @@ function App() {
                             This is the team work aspect to Surface 1.
                         </div>
                     </div>
-                    <div className="slide1">
-                    {slide1()}
-                    </div>
+                    <div className="slide1">{slide1()}</div>
                 </div>
                 <div className="container-right3">
                     <div>
@@ -136,7 +140,15 @@ function App() {
             <div className="content-2">
                 <span className="image-container2">
                     <img src={basketball} className="basketball"></img>
-                </span>
+                    <div className="bg-style-line">
+                        <div className="line l1"></div>
+                        <div className="line l2"></div>
+                    </div>
+                    <div className="bg-style-point">
+                        <div className="point p1">+</div>
+                        <div className="point p2">+</div>
+                    </div>           
+                </span>          
                 <div className="container-left1">
                     <div>
                         <div className="head-title">PLAYERS</div>
@@ -162,9 +174,7 @@ function App() {
                             finding talented athlete.
                         </div>
                     </div>
-                    <div className="slide2">
-                    {slide2()}
-                    </div>
+                    <div className="slide2">{slide2()}</div>
                 </div>
                 <div className="container-left3">
                     <div>
