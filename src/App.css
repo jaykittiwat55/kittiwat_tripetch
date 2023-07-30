@@ -148,7 +148,7 @@
 .line {
     background-color: #5e3db3;
     position: absolute;
-    width: 350px;
+    width: 45%;
     height: 2.5px;
     border-radius: 5px;
 }
@@ -175,12 +175,31 @@
     position: absolute;
     top: 15%;
     left: 15%;
+    display: flex;
 }
 .p2 {
     position: absolute;
     top: 75%;
     right: 15%;
+    display: flex;
 }
+.p1::before{
+    content: '+';
+    font-size: 25px;
+    color: #976efd56;
+    position: relative;
+    transform: translateY(-15px);
+   
+}
+.p2::after{
+    content: '+';
+    font-size: 25px;
+    color: #976efd56;
+    position: relative;
+    transform: translateY(15px);
+   
+}
+
 
 @media only screen and (max-width: 768px) {
     .image-container1 {
